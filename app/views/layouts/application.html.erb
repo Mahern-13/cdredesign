@@ -9,6 +9,64 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+      <img src="http://www.codeplatoon.org/wp-content/uploads/2015/11/cp_logo.png" alt="Code Platoon" id="logo" data-height-percentage="54" scale="0" data-actual-width="296" data-actual-height="62" data-pin-nopin="true">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#index">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#student">Students</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sponsor">Sponsors</a>
+          </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More Information
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Name">
+                <input class="form-control mr-sm-2" type="text" placeholder="Email">
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">Applying</label>
+                </div><br>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">Tuition</label>
+                </div><br>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">Demographics</label>
+                </div><br>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">Media</label>
+                </div><br>
+                <div class="checkbox disabled">
+                  <label><input type="checkbox" value="" disabled>News</label>
+                </div><br>
+                <div class="checkbox disabled">
+                  <label><input type="checkbox" value="" disabled>Mailing List</label>
+                </div><br>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SUBMIT</button>
+              </form>
+              </div>
+            </li>
+          </ul>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>  
   </body>
 </html>
+
+
