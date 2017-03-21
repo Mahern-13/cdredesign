@@ -1,0 +1,6 @@
+<% @json["data"].each do |vimeo| %>
+  <div class='VimeoVid'>
+  <%= vimeo["embed"]["html"].html_safe %>
+  <h4><sup><%= vimeo["name"] %></sup></h4>
+  </div>
+<% end %> 
