@@ -17,3 +17,8 @@
 //= require tether
 //= require bootstrap-sprockets
 //= require_tree .
+$(document).ready(function() {
+  $(".trigger").click(function() {
+    $(".menu").toggleClass("active"); 
+  });
+});

@@ -10,7 +10,7 @@
 
   <body>
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarToggler02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="#">
@@ -19,54 +19,51 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
           <li class="nav-item active">
-            <a class="nav-link" href="#index">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#index"><h4>Home</h4><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#student">Students</a>
+            <a class="nav-link" href="#student"><h4>Students</h4></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#sponsor">Sponsors</a>
+            <a class="nav-link" href="#sponsor"><h4>Sponsors</h4></a>
           </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown bg-inverse">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <h4>
                 More Information
+              </h4>
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Name">
-                <input class="form-control mr-sm-2" type="text" placeholder="Email">
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Applying</label>
-                </div><br>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Tuition</label>
-                </div><br>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Demographics</label>
-                </div><br>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Media</label>
-                </div><br>
-                <div class="checkbox disabled">
-                  <label><input type="checkbox" value="" disabled>News</label>
-                </div><br>
-                <div class="checkbox disabled">
-                  <label><input type="checkbox" value="" disabled>Mailing List</label>
-                </div><br>
+              <div class="dropdown-menu dropdown-menu-right bg-inverse" aria-labelledby="navbarDropdownMenuLink">
+              <form class="my-2 my-lg-0">
+              <p class="dropdown-header">Name:</p>
+                <input class="form-control mr-sm-2" type="text" placeholder="ex. Scott Plunkett...">
+              <p class="dropdown-header">Email:</p>
+                <input class="form-control mr-sm-2" type="email" placeholder="ex. hello@world.com...">
+                <div class="container-fluid">
+                <p class="dropdown-header">What would you like more information on? <br> <em>(Check all that apply...)</em> </p>
+                  <div class="dropdown-divider"></div>
+                  <ul>
+                  <li><label><input type="checkbox" value=""><p class="navbar-text">Applying</p></label></li>
+                  <li><label><input type="checkbox" value=""><p class="navbar-text">Tuition</p></label></li>
+                  <li><label><input type="checkbox" value=""><p class="navbar-text">Demographics</p></label></li>
+                  <li><label><input type="checkbox" value=""><p class="navbar-text">Media</p></label></li>
+                  <li><label><input type="checkbox" value=""><p class="navbar-text">News</p></label></li>
+                  <li><label><input type="checkbox" value=""><p class="navbar-text">Mailing List</p></label>
+                  </ul>
+                </div>  <div class="dropdown-divider"></div>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SUBMIT</button>
               </form>
               </div>
             </li>
           </ul>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
         </div>
       </div>
     </nav>
-    <div class="container-fluid">
       <%= yield %>
+      </body>
     </div>  
   </body>
 </html>
+
 
 
