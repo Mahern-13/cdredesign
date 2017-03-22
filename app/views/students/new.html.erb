@@ -1,0 +1,21 @@
+
+<%= error_messages_for(@student) %>
+<%= link_to("Back to Home Page", pages_path) %>
+
+  <%= form_for(@student) do |f| %>
+
+    <table summary="Student Form Fields">
+      <tr>
+        <th>Name</th>
+        <td><%= f.text_field(:name) %></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td> <%= f.text_field(:email, autofocus: true) %> </td>
+      </tr>
+    </table>
+      <%= f.submit("Create Student") %>
+
+
+  <% end %>
+
