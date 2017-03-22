@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
+
   root 'pages#index'
 
   resources :pages
 
-  resources :students do
-    member do
-      get :confirm_email
-    end
-  end
+  resources :students
+
+  resources :sponsors
 
   # get :student, to: 'pages#student'
 
