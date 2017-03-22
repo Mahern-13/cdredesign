@@ -1,72 +1,44 @@
 <!DOCTYPE html>
+
 <html>
+
   <head>
-    <title>Cdredesign</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-      <img src="http://www.codeplatoon.org/wp-content/uploads/2015/11/cp_logo.png" alt="Code Platoon" id="logo" data-height-percentage="54" scale="0" data-actual-width="296" data-actual-height="62" data-pin-nopin="true">
-      </a>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#index">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#student">Students</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#sponsor">Sponsors</a>
-          </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                More Information
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Name">
-                <input class="form-control mr-sm-2" type="text" placeholder="Email">
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Applying</label>
-                </div><br>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Tuition</label>
-                </div><br>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Demographics</label>
-                </div><br>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Media</label>
-                </div><br>
-                <div class="checkbox disabled">
-                  <label><input type="checkbox" value="" disabled>News</label>
-                </div><br>
-                <div class="checkbox disabled">
-                  <label><input type="checkbox" value="" disabled>Mailing List</label>
-                </div><br>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SUBMIT</button>
-              </form>
-              </div>
-            </li>
-          </ul>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.13/angular.min.js"></script>
+  <aside class="share" ng-app="app" ng-controller="ShareCtrl">
+    <ul>
+      <li class="share-fb"><a  href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.codeplatoon.org" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=yes,scrollbars=yes,resizable=yes,width=400,height=150'); return false"><i class="fa fa-facebook"></i></a></li>
+      
+      <li class="share-tw"><a href="https://twitter.com/intent/tweet/?text=Check%20out%20Code%20Platoon%2C%20the%20coding%20bootcamp%20for%20veterans!&amp;url=http%3A%2F%2Fwww.codeplatoon.org" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      
+      <li class="share-gp"><a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.codeplatoon.org"><i class="fa fa-google-plus"></i></a></li>
+      
+      <li class="share-pi"><a href="https://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.codeplatoon.org&amp;media=http%3A%2F%2Fwww.codeplatoon.org&amp;description=Check%20out%20Code%20Platoon%2C%20the%20coding%20bootcamp%20for%20veterans!"><i class="fa fa-pinterest"></i></a></li>
+      
+      <li class="share-in"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.codeplatoon.org&amp;title=Check%20out%20Code%20Platoon%2C%20the%20coding%20bootcamp%20for%20veterans!&amp;summary=Check%20out%20Code%20Platoon%2C%20the%20coding%20bootcamp%20for%20veterans!&amp;source=http%3A%2F%2Fwww.codeplatoon.org"><i class="fa fa-linkedin"></i></a></li>
+      
+      <li class="share-re"><a  href="https://reddit.com/submit/?url=http%3A%2F%2Fwww.codeplatoon.org"><i class="fa fa-reddit"></i></a></li>
+      
+      <li class="share-tu"><a href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Check%20out%20Code%20Platoon%2C%20the%20coding%20bootcamp%20for%20veterans!&amp;caption=Check%20out%20Code%20Platoon%2C%20the%20coding%20bootcamp%20for%20veterans!&amp;content=http%3A%2F%2Fwww.codeplatoon.org&amp;canonicalUrl=http%3A%2F%2Fwww.codeplatoon.org&amp;shareSource=tumblr_share_button"><i class="fa fa-tumblr"></i></a></li>
+      
+      <li><a href="mailto:?subject=Check%20out%20Code%20Platoon%2C%20the%20coding%20bootcamp%20for%20veterans!&amp;body=http%3A%2F%2Fwww.codeplatoon.org"><i class="fa fa-envelope"></i></a></li>
 
-        </div>
-      </div>
-    </nav>
-    <div class="container-fluid">
+    </ul>
+  </aside>
+  <div class="container-responsive">
+
+  
       <%= yield %>
-    </div>  
-  </body>
+      </div>
+      </body>
+
 </html>
+
 
 
