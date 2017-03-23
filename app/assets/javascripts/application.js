@@ -30,6 +30,13 @@ $(document).ready(function() {
   $(".share-less").click(function(){
     $(this).parent().removeClass("expanded");
   });
+  $(".btn1").click(function(){
+      $("p").slideUp();
+  });
+  $(".btn2").click(function(){
+      $("p").slideDown();
+  });
+  
 
   angular.module("app", ["app.directives", "app.filters"]);
 
