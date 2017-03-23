@@ -5,11 +5,15 @@ class VolunteersController < ApplicationController
 
   def create
     @volunteer = Volunteer.new(volunteer_params)
-    if @volunteer.save
-      flash[:notice] = "You will receive an email shortly"
-      redirect_to(pages_path)
-    else
-      render('new')
+    respond_to do |format|
+      if @volunteer.save
+        
+        ExampleMailer.volunteer_email(@volunteer).deliver!
+
+        format.html { redirect_to (pages_path), notice: 'You will receive an email shortly.' }
+      else
+        render('new')
+      end
     end
   end
 
