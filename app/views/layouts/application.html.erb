@@ -10,21 +10,11 @@
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
             <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 </head>
 
 <body>
 
-
-  <!-- links to forms -->
-   <%= link_to("Prospective Student?", new_student_path) %><br>
-   <%= link_to("Become a Volunteer", new_volunteer_path) %><br>
-   <%= link_to("Corporate Sponsorship Program", new_sponsor_path) %>
-
-
-  <!-- scott we need these for the flash hashes  -->
-  <p> <%= notice %></p>
-  <p> <%= alert %></p>
-  <!--  -->
 
     <aside class="share" ng-app="app" ng-controller="ShareCtrl">
         <ul>

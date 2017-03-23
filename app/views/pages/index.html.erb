@@ -14,7 +14,10 @@
             <button class="button" name="submit" alt="Donate">DONATE</button>
         </form>
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
             <div class="modal-dialog" role="document">
+                <p> <%= notice %></p>
+                <p> <%= alert %></p>
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -25,7 +28,7 @@
                         <div class="modal-item">
                             <div class="modal-divider"></div>
                             <button type="button" data-toggle="modal" data-target="#studentModal">
-                                STUDENT
+                                <%= link_to("STUDENT", new_student_path) %><br>
                             </button>
                             <br>
                             <!--STUDENT MODAL & FORM WILL GO HERE-->
@@ -33,14 +36,14 @@
                         <div class="modal-divider"></div>
                         <div class="modal-item">
                             <button type="button" data-toggle="modal" data-target="#sponsorModal">
-                                SPONSOR
+                                <%= link_to("SPONSOR", new_sponsor_path) %>
                             </button>
                             <br>
                         </div>
                         <div class="modal-divider"></div>
                         <div class="modal-item">
                             <button type="button" data-toggle="modal" data-target="#volunteerModal">
-                                VOLUNTEER
+                                <%= link_to("VOLUNTEER", new_volunteer_path) %><br>
                             </button>
                             <br>
                         </div>
