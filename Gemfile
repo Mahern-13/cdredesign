@@ -47,6 +47,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'httparty'
 
+
 # gem 'dotenv-rails', :groups => [:development, :test]
 
 # Use Capistrano for deployment

@@ -1,0 +1,28 @@
+
+<%= error_messages_for(@volunteer) %>
+<%= link_to("Back to Home Page", pages_path) %>
+
+  <%= form_for(@volunteer) do |f| %>
+
+    <table summary="Volunteer Form Fields">
+      <tr>
+        <th>Name</th>
+        <td><%= f.text_field(:name) %></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td><%= f.text_field(:email) %></td>
+      </tr>
+       <tr>
+        <th>Github URL</th>
+        <td> <%= f.text_field(:github) %> </td>
+      </tr>
+      <tr>
+        <th>Linkedin URL</th>
+        <td> <%= f.text_field(:linked_in) %> </td>
+      </tr>
+    </table>
+      <%= f.submit("Receive More Information") %>
+
+
+  <% end %>

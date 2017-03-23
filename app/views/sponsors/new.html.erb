@@ -1,0 +1,32 @@
+
+<%= error_messages_for(@sponsor) %>
+<%= link_to("Back to Home Page", pages_path) %>
+
+  <%= form_for(@sponsor) do |f| %>
+
+    <table summary="Sponsor Form Fields">
+      <tr>
+        <th>Company Name</th>
+        <td><%= f.text_field(:company_name) %></td>
+      </tr>
+      <tr>
+        <th>Company Address</th>
+        <td><%= f.text_field(:company_address) %></td>
+      </tr>
+       <tr>
+        <th>Comapny Name</th>
+        <td> <%= f.text_field(:contact_name) %> </td>
+      </tr>
+      <tr>
+        <th>Contact Email</th>
+        <td> <%= f.text_field(:contact_email) %> </td>
+      </tr>
+      <tr>
+        <th>Contact Phone</th>
+        <td> <%= f.text_field(:contact_phone) %> </td>
+      </tr>
+    </table>
+      <%= f.submit("Receive More Information") %>
+
+
+  <% end %>
