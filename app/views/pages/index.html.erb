@@ -1,61 +1,75 @@
+<div id="header">
+    <div class="button form-inline">
+        <button type="button">ABOUT</button>
+        <form action="https://www.paypal.com/cgi-bin/webscr" target="_blank" method="post">
+            <!-- Identify your business so that you can collect the payments. -->
+            <input type="hidden" name="business" value="donations@codeplatoon.org">
+            <!-- Specify a Donate button. -->
+            <input type="hidden" name="cmd" value="_donations">
+            <!-- Specify details about the contribution -->
+            <input type="hidden" name="item_name" value="Code Platoon">
+            <input type="hidden" name="item_number" value="Non-profit Revenue">
+            <input type="hidden" name="currency_code" value="USD">
+            <!-- Display the payment button. -->
+            <button class="button" name="submit" alt="Donate">DONATE</button>
+        </form>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 
-  <div id="header">
-  <div class="button">
-    <button type="button" onclick="alert('Hello world!')">ABOUT</button>
-    <button type="button" onclick="alert('Hello world!')">DONATE</button>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Contact Information & Form</h4>
-          </div>
-          <div class="modal-body">
-
-          <a href="mailto:rod@codeplatoon.org" class="btn btn-info btn-lg">
-          Send Email
-        </a></h4>
-
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+            <div class="modal-dialog" role="document">
+                <p> <%= notice %></p>
+                <p> <%= alert %></p>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">REQUEST INFORMATION:</h4>
+                    </div>
+                    <div class="modal-body bg-inverse form-inline justify-content-center">
+                        <p class="modal-header">I'm interested in more information on becoming a...</p>
+                        <div class="modal-item">
+                            <div class="modal-divider"></div>
+                            <button type="button" data-toggle="modal" data-target="#studentModal">
+                                <%= link_to("STUDENT", new_student_path) %><br>
+                            </button>
+                            <br>
+                            <!--STUDENT MODAL & FORM WILL GO HERE-->
+                        </div>
+                        <div class="modal-divider"></div>
+                        <div class="modal-item">
+                            <button type="button" data-toggle="modal" data-target="#sponsorModal">
+                                <%= link_to("SPONSOR", new_sponsor_path) %>
+                            </button>
+                            <br>
+                        </div>
+                        <div class="modal-divider"></div>
+                        <div class="modal-item">
+                            <button type="button" data-toggle="modal" data-target="#volunteerModal">
+                                <%= link_to("VOLUNTEER", new_volunteer_path) %><br>
+                            </button>
+                            <br>
+                        </div>
+                        <div class="modal-divider"></div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-inverse justify-content-center">
+                    <a href="mailto:rod@codeplatoon.org" class="btn btn-info"> Neet something else? Email Us!</a>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-
     </div>
     <h1 class="display-1"><br>CODE</h1>
-    <h1 class="display-1">PLATOON</h1><br>
-      <p class="lead"><br>The coding bootcamp for people that have been to bootcamp.</p></h1>
-
-    <div class="dropdown">
-    <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    REQUEST INFORMATION</button>
-    <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu2">
-    <div class="dropdown-item">
-      Name: <input type="text" name="name" placeholder="ex. Scott Plunkett...">
-    </div>
-    <div class="dropdown-item">
-      Email: <input type="text" name="email" placeholder="ex. Scott Plunkett...">
-    </div>  <div class="dropdown-divider"></div>
-    <div class="dropdown-item">
-      <input class="btn-secondary" type="submit" name="submit">
-    </div>
-    </div>
+    <h1 class="display-1">PLATOON</h1>
+    <br>
+    <p class="lead">
+        <br>The coding bootcamp for people that have been to bootcamp.</p>
+    </h1>
     <!-- Button trigger modal -->
-    <button type="button" data-toggle="modal" data-target="#myModal">
-      CONTACT US
+    <button type="button btn2" data-toggle="modal" data-target="#myModal">
+        REQUEST INFORMATION
     </button>
-
     <!-- Modal -->
+    <div id="charity-annotation">
+        <small>Code Platoon is a 501(c)(3) registered non-profit, contributions help turn veterans into software developers.</small>
+    </div>
+</div>
 
-  </div>
-  <div id="charity-annotation">
-  <small>Code Platoon is a 501(c)(3) registered non-profit, contributions help turn veterans into software developers.</small>
-  </div>
-  </div>
-
-  

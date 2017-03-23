@@ -14,6 +14,6 @@ class ApplicationMailer < ActionMailer::Base
 
   def sponsor_email(sponsor)
     @sponsor = sponsor
-    mail(to: @sponsor.email, subject: 'Sample Email')
+    mail(to: @sponsor.contact_email, subject: 'Sample Email')
   end
 end
