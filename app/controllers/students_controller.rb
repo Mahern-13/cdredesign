@@ -13,8 +13,6 @@ class StudentsController < ApplicationController
         ExampleMailer.student_email(@student).deliver!
 
           format.html { redirect_to (pages_path), notice: 'You will receive an email shortly.' }
-
-
       else
         render('new')
       end
