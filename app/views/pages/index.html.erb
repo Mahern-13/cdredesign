@@ -1,7 +1,7 @@
 <div class="container" id="header">
-    <div class="button form-inline">
+    <div class="button nav form-inline">
         <a href="about/index">
-            <button type="button">ABOUT</button>
+            <button class="btn-responsive" type="button">ABOUT</button>
         </a>
         <form action="https://www.paypal.com/cgi-bin/webscr" target="_blank" method="post">
             <!-- Identify your business so that you can collect the payments. -->
@@ -13,7 +13,7 @@
             <input type="hidden" name="item_number" value="Non-profit Revenue">
             <input type="hidden" name="currency_code" value="USD">
             <!-- Display the payment button. -->
-            <button class="button" name="submit" alt="Donate">DONATE</button>
+            <button class="btn-responsive" name="submit" alt="Donate">DONATE</button>
         </form>
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
@@ -141,7 +141,7 @@
         <br>The coding bootcamp for people that have been to bootcamp.</p>
     </h1>
     <!-- Button trigger modal -->
-    <button type="button" data-toggle="modal" data-target="#myModal">
+    <button class="btn-responsive" id="requestButton" type="button" data-toggle="modal" data-target="#myModal">
         REQUEST INFORMATION
     </button>
     <!-- Modal -->
