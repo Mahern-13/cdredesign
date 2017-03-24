@@ -20,7 +20,7 @@ html, body{
 }
 
 #header {
-margin-top: 10em;
+  margin: 10em;
   background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(40, 55, 30, 0.8)), url("Enlight74 copy.jpg");
   height: 100vh;
   width: 100vw;
@@ -54,12 +54,14 @@ p {
 }
 
 button {
+  margin-top: 6em;
   font-family: 'Allerta Stencil', sans-serif;
-  padding: 10px 17px;
+  text-padding: 1em 7em;
   background:transparent;
   color:#fff;
   border: 2px solid white;
   font-size: 18px;
+  flex-direction:column;
 }
 
 button:hover {
@@ -148,14 +150,14 @@ $youtube:     #cd201f;
       cursor: pointer;
       transition: all .25s linear;
       z-index: 310;
-                   &:hover { background: #aaa;         } a { color: #aaa;         }
-      &.share-fb { &:hover { background: $facebook;    } a { color: $facebook;    } }
-      &.share-tw { &:hover { background: $twitter;     } a { color: $twitter;     } }
-      &.share-gp { &:hover { background: $google-plus; } a { color: $google-plus; } }
-      &.share-pi { &:hover { background: $pinterest;   } a { color: $pinterest;   } }
-      &.share-re { &:hover { background: $reddit;      } a { color: $reddit;      } }
-      &.share-tu { &:hover { background: $tumblr;      } a { color: $tumblr;      } }
-      &.share-in { &:hover { background: $linkedin;    } a { color: $linkedin;    } }
+                   &:hover { background: #aaa;         } a { color: #aaa;        } }
+      &.share-fb { &:hover { background: $facebook;    } a { color: #aaa;        } }
+      &.share-tw { &:hover { background: $twitter;     } a { color: #aaa;        } }
+      &.share-gp { &:hover { background: $google-plus; } a { color:#aaa;         } }
+      &.share-pi { &:hover { background: $pinterest;   } a { color: #aaa;        } }
+      &.share-re { &:hover { background: $reddit;      } a { color:#aaa;         } }
+      &.share-tu { &:hover { background: $tumblr;      } a { color:#aaa;         } }
+      &.share-in { &:hover { background: $linkedin;    } a { color: #aaa;        } }
       
       a {
         display: block;
@@ -179,7 +181,7 @@ $youtube:     #cd201f;
   .share-less {
     display: none;
   }
-}
+
 
 
 

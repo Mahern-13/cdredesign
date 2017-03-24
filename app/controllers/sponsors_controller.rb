@@ -1,5 +1,5 @@
 class SponsorsController < ApplicationController
-   def new
+  def new
     @sponsor = Sponsor.new
   end
 
