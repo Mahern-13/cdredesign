@@ -26,6 +26,8 @@ class StudentsController < ApplicationController
   end
 end
 
+
+
  # @user = User.new(user_params)
  #  respond_to do |format|
  #    if @user.save

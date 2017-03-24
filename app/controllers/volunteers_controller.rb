@@ -1,5 +1,5 @@
 class VolunteersController < ApplicationController
-   def new
+  def new
     @volunteer = Volunteer.new
   end
 
