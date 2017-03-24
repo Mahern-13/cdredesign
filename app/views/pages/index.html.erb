@@ -1,3 +1,4 @@
+ <%= flash[:notice] %>
 <div class="container" id="header">
     <div class="button nav form-inline">
         <a href="about/index">
@@ -18,7 +19,7 @@
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <p>
-                    <%= notice %>
+
                 </p>
                 <p>
                     <%= alert %>
@@ -49,14 +50,14 @@
                                                 <span class="sr-only">Close</span>
                                             </button>
                                             <h4 class="modal-title" id="myModalLabel">
-                                                INFO REQUEST FORM: STUDENT & ADMISSIONS 
+                                                INFO REQUEST FORM: STUDENT & ADMISSIONS
                                             </h4>
                                         </div>
                                         <!-- Modal Body -->
                                         <div class="modal-body">
-                                            <form class="form-horizontal" role="form">
+                                            <div class="form-horizontal" role="form">
                                                 <%= render template: 'students/new' %>
-                                            </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -82,14 +83,14 @@
                                             <span class="sr-only">Close</span>
                                         </button>
                                         <h4 class="modal-title" id="myModalLabel">
-                                            INFO REQUEST FORM: SPONSORSHIP 
+                                            INFO REQUEST FORM: SPONSORSHIP
                                         </h4>
                                     </div>
                                     <!-- Modal Body -->
                                     <div class="modal-body">
-                                        <form class="form-horizontal" role="form">
+                                        <div class="form-horizontal" role="form">
                                             <%= render template: 'sponsors/new' %>
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -117,9 +118,9 @@
                                     </div>
                                     <!-- Modal Body -->
                                     <div class="modal-body">
-                                        <form class="form-horizontal" role="form">
+                                        <div class="form-horizontal" role="form">
                                             <%= render template: 'volunteers/new' %>
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

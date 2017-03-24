@@ -1,21 +1,22 @@
 
 class StudentsController < ApplicationController
-
+  include ApplicationHelper
   def new
     @student = Student.new
   end
 
   def create
     @student = Student.new(student_params)
-    respond_to do |format|
-      if @student.save
+    if @student.save
 
+      email_alert
+
+      respond_to do |format|
         ExampleMailer.student_email(@student).deliver!
-
-          format.html { redirect_to (pages_path), notice: 'You will receive an email shortly.' }
-      else
-        render('new')
+        format.html { redirect_to (pages_path)}
       end
+    else
+      render('new')
     end
   end
 

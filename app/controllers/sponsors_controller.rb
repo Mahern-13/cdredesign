@@ -1,19 +1,23 @@
 class SponsorsController < ApplicationController
+  include ApplicationHelper
   def new
     @sponsor = Sponsor.new
   end
 
   def create
     @sponsor = Sponsor.new(sponsor_params)
-    respond_to do |format|
-      if @sponsor.save
-        ExampleMailer.sponsor_email(@sponsor).deliver!
+    if @sponsor.save
+      email_alert
 
-        format.html { redirect_to (pages_path), notice: 'You will receive an email shortly.' }
-      else
-        render('new')
+      respond_to do |format|
+        ExampleMailer.sponsor_email(@sponsor).deliver!
+        format.html { redirect_to (pages_path) }
+        flash[:notice] = 'You will receive an email shortly.'
       end
+    else
+      render('new')
     end
+
   end
 
   private
