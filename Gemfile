@@ -33,6 +33,8 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'figaro'
 
+gem 'sidekiq'
+
 gem 'actionmailer', '~> 5.0', '>= 5.0.0.1'
 
 # Use jquery as the JavaScript library
