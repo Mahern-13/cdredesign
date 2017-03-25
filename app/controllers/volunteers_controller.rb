@@ -11,7 +11,7 @@ class VolunteersController < ApplicationController
       email_alert
 
       respond_to do |format|
-        ExampleMailer.volunteer_email(@volunteer).deliver!
+        ExampleMailer.volunteer_email(@volunteer).deliver_later
         format.html { redirect_to (pages_path), notice: 'You will receive an email shortly.' }
       end
 

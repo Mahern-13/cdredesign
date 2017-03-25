@@ -10,7 +10,7 @@ class SponsorsController < ApplicationController
       email_alert
 
       respond_to do |format|
-        ExampleMailer.sponsor_email(@sponsor).deliver!
+        ExampleMailer.sponsor_email(@sponsor).deliver_later
         format.html { redirect_to (pages_path) }
         flash[:notice] = 'You will receive an email shortly.'
       end
