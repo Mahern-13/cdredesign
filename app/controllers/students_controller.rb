@@ -12,7 +12,7 @@ class StudentsController < ApplicationController
       email_alert
 
       respond_to do |format|
-        ExampleMailer.student_email(@student).deliver!
+        ExampleMailer.student_email(@student).deliver_later
         format.html { redirect_to (pages_path)}
       end
     else
