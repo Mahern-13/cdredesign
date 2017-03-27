@@ -1,1 +1,46 @@
 <h3>Class content- video input</h3>
+<% @json["data"].each do |vimeo| %>
+  <div class='VimeoVid'>
+  <%= vimeo["embed"]["html"].html_safe %>
+  <h4><sup><%= vimeo["name"] %></sup></h4>
+  </div>
+<% end %>
+
+<h1>Overview</h1>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SgnceLqzwaQ?ecver=1" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<h1>Business Model</h1>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jCdKUPSy4ng?ecver=1" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<!-- A good size for the css on the videos is 560px by 315px for the max -->
+
+<h1>Enova (Corporate Sponsor) Hack Night</h1>
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/oRquPQ4y-oM?ecver=1" frameborder="0" allowfullscreen></iframe> -->
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oRquPQ4y-oM?ecver=1" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<h1>In the News</h1>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HEea_rokP0k?ecver=1" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<h1>Previous Applicants</h1>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/IQn0_sSAtUU?ecver=1" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/02tJex33eM4?ecver=1" frameborder="0" allowfullscreen></iframe>
+</div>
+

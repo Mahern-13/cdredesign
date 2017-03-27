@@ -1,3 +1,209 @@
 // Place all the styles related to the About controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
+
+@media (max-width: 768px) {
+  .btn {
+    font-size:40px;
+    padding:4px 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+    font-size:12px;
+    padding:6px 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .btn {
+    font-size:14px;
+    padding:8px 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn {
+    padding:10px 16px;
+    font-size:18px;
+  }
+}
+
+html, body{
+  margin: 0 auto;
+  height: 100%;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-weight: 100;
+}
+
+#charity-annotation {
+
+    margin-top: 10em;
+
+}
+
+
+
+#header {
+  overflow: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(40, 55, 30, 0.8)), url("Enlight74 copy.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  margin: 0 auto;
+}
+
+h1, p {
+  color: #fff;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 0.8;
+
+}
+
+h1 {
+  font-size: 60pt;
+  text-align: center;
+  line-height: .2em;
+}
+
+p {
+  font-size: 30pt;
+  text-align: center;
+  line-height: 1em;
+}
+
+button {
+white-space: nowrap;
+  position: relative;
+  margin-top: 6em;
+  font-family: 'Allerta Stencil', sans-serif;
+  text-align:center;
+  text-shadow:0.5px 1px #494C37;
+  padding:10px;
+  background:transparent;
+  color:#fff;
+  border: 2px solid white;
+  width:150px;
+  min-width:200px;
+  min-height:35px;
+  font-size: 25px;
+  overflow: hidden;
+  border-radius: 10px;
+  -moz-border-radius:10px;
+  -webkit-border-radius: 10px;
+  }
+
+button:hover {
+  font-family: 'Allerta Stencil', sans-serif;
+  background: white;
+  color: black;
+  transition: all .3s ease-in-out;
+}
+
+
+
+
+#requestButton {
+
+  width: 310px;
+  min-width: 305px;
+  min-height:55px;
+}
+
+
+
+$facebook:    #3b5999;
+$twitter:     #55acee;
+$google-plus: #df4a32;
+$pinterest:   #cc2127;
+$reddit:      #336699; //#cee3f8, #ff4500
+$tumblr:      #35465c;
+$linkedin:    #007bb6;
+
+$digg:        #000000;
+$stumbleupon: #eb4924;
+$dribbble:    #ea4c89;
+$instagram:   #3f729b;
+$delicious:   #3399ff;
+$youtube:     #cd201f;
+
+.share {
+  width: 50px;
+  height: 270px;
+  padding: 5px;
+  margin: 0;
+  color: #444;
+  border-radius: 0 8px 8px 0;
+  border: 1px solid #ccc;
+  border-left-width: 0;
+  box-shadow:  0px 0px 10px #ccc;
+  position: fixed;
+  top: calc(50% - 75px);
+  left: 0px;
+  z-index: 295;
+  &.expanded {
+    width: 64px;
+    ul.share-other, .share-less {
+      display: block;
+    }
+    .share-more {
+      display: none;
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    display: block;
+    float: left;
+    &.share-other {
+      display: none;
+    }
+    li {
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 16px;
+      font-size: 22px;
+      text-align: center;
+      display: block;
+      list-style-type: none;
+      cursor: pointer;
+      transition: all .25s linear;
+      z-index: 310;
+                   &:hover { background: #aaa;         } a { color: #aaa;        } }
+      &.share-fb { &:hover { background: $facebook;    } a { color: #aaa;        } }
+      &.share-tw { &:hover { background: $twitter;     } a { color: #aaa;        } }
+      &.share-gp { &:hover { background: $google-plus; } a { color:#aaa;         } }
+      &.share-pi { &:hover { background: $pinterest;   } a { color: #aaa;        } }
+      &.share-re { &:hover { background: $reddit;      } a { color:#aaa;         } }
+      &.share-tu { &:hover { background: $tumblr;      } a { color:#aaa;         } }
+      &.share-in { &:hover { background: $linkedin;    } a { color: #aaa;        } }
+      
+      a {
+        display: block;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
